@@ -1,0 +1,32 @@
+/* Обновляем задний фон */
+.parallax-bg {
+  position: absolute;
+  inset: -50px;
+  background-image: url('./Back_2.jpeg'); /* Твое синее небо */
+  background-size: cover;
+  background-position: top center;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Добавляем новый слой для гор */
+.parallax-mountains {
+  position: absolute;
+  bottom: -50px; /* Небольшой запас снизу для скролла */
+  left: 0;
+  width: 100%;
+  height: 110%; /* Делаем чуть больше контейнера */
+  background-image: url('./front_2.png'); /* Файл с прозрачным фоном! */
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  will-change: transform;
+}
+
+/* Текст теперь должен быть поверх гор (z-index: 3) */
+.parallax-front {
+  position: relative;
+  z-index: 3;
+  /* остальные стили текста остаются без изменений */
+}
